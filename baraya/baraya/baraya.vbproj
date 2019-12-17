@@ -91,6 +91,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Nuryanto.Designer.vb">
+      <DependentUpon>Nuryanto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Nuryanto.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
