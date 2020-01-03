@@ -46,6 +46,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -69,13 +70,14 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="herdian.vb">
+    <Compile Include="form_login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="herdian.Designer.vb">
-      <DependentUpon>herdian.vb</DependentUpon>
+    <Compile Include="form_login.Designer.vb">
+      <DependentUpon>form_login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="koneksi.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -97,13 +99,25 @@
     <Compile Include="Nuryanto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="tambah_petugas.Designer.vb">
+      <DependentUpon>tambah_petugas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tambah_petugas.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="form_login.resx">
+      <DependentUpon>form_login.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tambah_petugas.resx">
+      <DependentUpon>tambah_petugas.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
