@@ -1,0 +1,10 @@
+E:\vb 13\barayavb\baraya\bin\Debug\baraya.exe
+E:\vb 13\barayavb\baraya\bin\Debug\baraya.pdb
+E:\vb 13\barayavb\baraya\bin\Debug\baraya.xml
+E:\vb 13\barayavb\baraya\obj\Debug\baraya.form_login.resources
+E:\vb 13\barayavb\baraya\obj\Debug\baraya.Resources.resources
+E:\vb 13\barayavb\baraya\obj\Debug\baraya.tambah_petugas.resources
+E:\vb 13\barayavb\baraya\obj\Debug\baraya.vbproj.GenerateResource.Cache
+E:\vb 13\barayavb\baraya\obj\Debug\baraya.exe
+E:\vb 13\barayavb\baraya\obj\Debug\baraya.xml
+E:\vb 13\barayavb\baraya\obj\Debug\baraya.pdb
