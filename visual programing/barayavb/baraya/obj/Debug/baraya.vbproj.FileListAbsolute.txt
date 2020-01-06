@@ -8,3 +8,6 @@ E:\vb 13\barayavb\baraya\obj\Debug\baraya.vbproj.GenerateResource.Cache
 E:\vb 13\barayavb\baraya\obj\Debug\baraya.exe
 E:\vb 13\barayavb\baraya\obj\Debug\baraya.xml
 E:\vb 13\barayavb\baraya\obj\Debug\baraya.pdb
+D:\BarayaSquad\Barayasquad\visual programing\barayavb\baraya\obj\Debug\baraya.exe
+D:\BarayaSquad\Barayasquad\visual programing\barayavb\baraya\obj\Debug\baraya.xml
+D:\BarayaSquad\Barayasquad\visual programing\barayavb\baraya\obj\Debug\baraya.pdb
