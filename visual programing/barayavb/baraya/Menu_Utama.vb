@@ -86,4 +86,7 @@ Public Class Menu_Utama
     Private m_ChildFormNumber As Integer
 
  
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        MsgBox("Help")
+    End Sub
 End Class
