@@ -5,7 +5,8 @@ Module koneksi
     Public cmd As New MySqlCommand
     Public MySQLReader As MySqlDataReader
     Public da As New MySqlDataAdapter
-
+    'Public ds As DataSet
+    'Public da1 As New OleDb.OleDbDataAdapter
     Public Sub koneksibuka()
         If conn.State = ConnectionState.Closed Then
             Dim mystring As String
