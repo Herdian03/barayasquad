@@ -33,11 +33,11 @@ Partial Class Menu_Utama
         Me.PetugasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransaksiParkirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HlepToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.HlepToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         Me.SuspendLayout()
@@ -87,13 +87,13 @@ Partial Class Menu_Utama
         'PetugasToolStripMenuItem
         '
         Me.PetugasToolStripMenuItem.Name = "PetugasToolStripMenuItem"
-        Me.PetugasToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.PetugasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PetugasToolStripMenuItem.Text = "Petugas"
         '
         'TransaksiToolStripMenuItem
         '
         Me.TransaksiToolStripMenuItem.Name = "TransaksiToolStripMenuItem"
-        Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TransaksiToolStripMenuItem.Text = "Transaksi"
         '
         'TransaksiParkirToolStripMenuItem
@@ -101,6 +101,19 @@ Partial Class Menu_Utama
         Me.TransaksiParkirToolStripMenuItem.Name = "TransaksiParkirToolStripMenuItem"
         Me.TransaksiParkirToolStripMenuItem.Size = New System.Drawing.Size(100, 20)
         Me.TransaksiParkirToolStripMenuItem.Text = "&Transaksi Parkir"
+        '
+        'HlepToolStripMenuItem
+        '
+        Me.HlepToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
+        Me.HlepToolStripMenuItem.Name = "HlepToolStripMenuItem"
+        Me.HlepToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HlepToolStripMenuItem.Text = "Help"
+        '
+        'AboutToolStripMenuItem
+        '
+        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
+        Me.AboutToolStripMenuItem.Text = "About"
         '
         'StatusStrip
         '
@@ -116,19 +129,6 @@ Partial Class Menu_Utama
         Me.ToolStripStatusLabel.Name = "ToolStripStatusLabel"
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(39, 17)
         Me.ToolStripStatusLabel.Text = "Status"
-        '
-        'HlepToolStripMenuItem
-        '
-        Me.HlepToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem})
-        Me.HlepToolStripMenuItem.Name = "HlepToolStripMenuItem"
-        Me.HlepToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.HlepToolStripMenuItem.Text = "Help"
-        '
-        'AboutToolStripMenuItem
-        '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.AboutToolStripMenuItem.Text = "About"
         '
         'Menu_Utama
         '
