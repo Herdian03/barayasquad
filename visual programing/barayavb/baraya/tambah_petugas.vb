@@ -2,6 +2,7 @@
 Imports baraya.koneksi
 
 Public Class tambah_petugas
+    Dim e As String
 
     Sub bersih()
         tbnip.Clear()
@@ -107,6 +108,7 @@ Public Class tambah_petugas
 
         End With
         statustombol(True, True, True)
+        
     End Sub
 
     Private Sub btnhapus_Click(sender As Object, e As EventArgs) Handles btnhapus.Click
@@ -142,6 +144,99 @@ Public Class tambah_petugas
             'bersih()
         End If
         bersih()
+
+    End Sub
+
+    Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
+        If btnedit.Text = "edit" Then
+            btnedit.Text = "simpan"
+            btnhapus.Text = "batal"
+            btntambah.Enabled = False
+            btnhapus.Enabled = False
+            tbnip.Enabled = False
+            tbnamapetugas.Enabled = True
+            tbpassword.Enabled = True
+            cbjeniskelamin.Enabled = True
+        ElseIf btnedit.Text = "simpan" Then
+            Try
+                Dim qupdate As String
+                qupdate = "update petugas set nama_petugas='" & tbnamapetugas.Text & "', password='" & tbpassword.Text & "', jenis_kelamin='" & cbjeniskelamin.Text & "' where nip='" & tbnip.Text & "'"
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = qupdate
+                cmd.Connection = conn
+                cmd.ExecuteNonQuery()
+                MsgBox("Data berhasil Di Rubah", MsgBoxStyle.Information, "Informasi")
+                statusinput(False, False, False, False)
+                statustombol(True, False, False)
+                tampildata()
+                btnedit.Text = "edit"
+            Catch ex As Exception
+                MsgBox("ubah data gagal", MsgBoxStyle.Critical, "Warning")
+            End Try
+        End If
+    End Sub
+
+    Private Sub tbpassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbpassword.KeyPress
+        'syntax ketika enter langsung lajut ke textbox selanjutnya
+        If Asc(e.KeyChar) = 13 Then
+            cbjeniskelamin.Focus()
+        End If
+    End Sub
+
+    Private Sub tbpassword_TextChanged(sender As Object, e As EventArgs) Handles tbpassword.TextChanged
+
+    End Sub
+
+    Private Sub tabelpetugas_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles tabelpetugas.CellContentClick
+
+    End Sub
+
+    Private Sub tabelpetugas_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles tabelpetugas.CellFormatting
+        'ini cara menampilkan password char di data gridview
+        If (e.ColumnIndex <> -1 AndAlso tabelpetugas.Columns(e.ColumnIndex).Name = "password") Then
+            If (Not e.Value Is Nothing) Then
+                e.Value = New String("*", e.Value.ToString().Length)
+            End If
+        End If
+    End Sub
+
+    Private Sub tbnip_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbnip.KeyPress
+        If Asc(e.KeyChar) = 13 Then
+            tbnamapetugas.Focus()
+        End If
+    End Sub
+
+    Private Sub tbnamapetugas_KeyPress(sender As Object, e As KeyPressEventArgs) Handles tbnamapetugas.KeyPress
+        If Asc(e.KeyChar) = 13 Then
+            tbpassword.Focus()
+        End If
+    End Sub
+
+    Private Sub tbnamapetugas_TextChanged(sender As Object, e As EventArgs) Handles tbnamapetugas.TextChanged
+
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+
+        Dim yakinhapus1 As MsgBoxResult = MessageBox.Show("Yakin Mau Keluar BEB ??", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If yakinhapus1 = vbYes Then
+            Try
+                Close()
+            Catch ex As Exception
+
+            End Try
+        End If
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub btncari_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub tbcari_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class
